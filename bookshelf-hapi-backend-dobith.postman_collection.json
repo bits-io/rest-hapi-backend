@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "851e3a0c-a9fb-4836-a006-f12d0ddf28db",
+		"name": "Bookshelf API - Submission Dicoding - Dobith",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20072584"
+	},
+	"item": [
+		{
+			"name": "Get All Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Book Without Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Book With Finished",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books?finished=1",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "finished",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Book With UnFinished",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books?finished=0",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "finished",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Book With Reading",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books?reading=1",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "finished",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "reading",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Book With UnReading",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books?reading=0",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "finished",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "reading",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Book With Dicoding Word",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books?name=Dicoding",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Dicoding"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Detail Book With Correct Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books/U2wWl1trmDkDWSI2Wnzx2",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"U2wWl1trmDkDWSI2Wnzx2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Detail Book With Invalid Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/books/123",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book With Complete Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Dicoding\",\r\n    \"year\": 321123,\r\n    \"author\": \"dfsa\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"face\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 2,\r\n    \"reading\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book With Finished Reading",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Backend\",\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 30,\r\n    \"reading\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book Without Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 30,\r\n    \"reading\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book with Page Read More Than Page Count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"FF\",\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 39,\r\n    \"reading\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book With Complete Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"backend book\",\r\n    \"year\": 2023,\r\n    \"author\": \"dobith\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"Dicoding BDG\",\r\n    \"pageCount\": 3000,\r\n    \"readPage\": 30,\r\n    \"reading\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books/YCBkYfMv8e9Q3nApsSlLY",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"YCBkYfMv8e9Q3nApsSlLY"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book Without Name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 30,\r\n    \"reading\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books/xONXOVsBt-bsk_MQW4Pr5",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"xONXOVsBt-bsk_MQW4Pr5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book With Page Read More Than Page Count",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"backend book\",\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 100,\r\n    \"reading\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books/xONXOVsBt-bsk_MQW4Pr5",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"xONXOVsBt-bsk_MQW4Pr5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book with Invalid Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"backend book\",\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 100,\r\n    \"reading\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books/677b0df0-3456-463e-858e-2409937625e",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"677b0df0-3456-463e-858e-2409937625e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book with Invalid Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books/677b0df0-3456-463e-858e-2409937625",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"677b0df0-3456-463e-858e-2409937625"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book with Correct Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books/xONXOVsBt-bsk_MQW4Pr5",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"xONXOVsBt-bsk_MQW4Pr5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Finished book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books/2e02c9b1-48c5-4161-9ca1-57abb81a121b",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						"2e02c9b1-48c5-4161-9ca1-57abb81a121b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Reading and Finished Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Backend\",\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"About powerfull backend\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 30,\r\n    \"readPage\": 30,\r\n    \"reading\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Reading and Unfinished Book with \\\"Dicoding\\\" Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Kelas Dicoding\",\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"Kelas dicoding\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 100,\r\n    \"readPage\": 30,\r\n    \"reading\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Unreading Books and Unfinished Book \\\"Dicoding\\\" Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Dicoding Job\",\r\n    \"year\": 2023,\r\n    \"author\": \"bit\",\r\n    \"summary\": \"Kelas dicoding\",\r\n    \"publisher\": \"C3142\",\r\n    \"pageCount\": 80,\r\n    \"readPage\": 30,\r\n    \"reading\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
